@@ -1,0 +1,20 @@
+extends layout
+block content
+
+  h1= title
+  div
+    table
+      thead
+        th NO
+        th NAMA
+        th JURUSAN
+        th UMUR
+      tbody
+        td.list #{list.no}
+        td(width='100').list #{list.nama}
+        td(width='100').list #{list.jurusan}
+        td.list #{list.umur}
+
+  br
+  br
+  a.blue(href='/') back

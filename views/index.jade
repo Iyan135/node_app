@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  br
+  a.blue(href='new_list') add Data
+  br
+  br
+  div
+    table(border='1')
+      thead
+        th NO
+        th NAMA
+        th JURUSAN
+        th UMUR
+        th AKSI
+      tbody
+        each s in list
+          tr
+            td #{s.no}
+            td #{s.nama}
+            td #{s.jurusan}
+            td #{s.umur}
+            td #[a.blue(href='/list_detail/'+s.no) Detail] | #[a.green(href='/update_list/'+s.no) Edit] | #[a.red(href='/delete_list/'+s.no) Delete]
+  br
+  br
+  a.green(href='') Reload
